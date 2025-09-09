@@ -1,0 +1,64 @@
+ <!DOCTYPE html>
+ 
+ <html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Form</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <h2> User Information </h2>
+        <form action = "/action.php">
+            <label>Username</label>
+            <br><input type = "text" placeholder="Enter Username">
+             
+            <br><label>Password</label></form>
+            <input type ="password" placeholder="Enter your password">
+
+            <h4>Select Course:</h4>
+            <label for="101">
+            <input type="radio" value="BTech" id="101"> B.Tech
+            </label>
+            <label for="102">
+            <input type="radio" value="MTech" id="102"> M.Tech
+            </label>
+            <label for="103">
+            <input type="radio" value="MCA" id="103"> MCA
+            </label>
+            <label for="104">
+            <input type="radio" value="BCA" id="104"> BCA
+            </label>
+            <h4>Your Subject Choices</h4>
+            <label for="105">
+            <input type="checkbox" value="Maths" id="105"> Maths
+            </label>
+            <label for="106">
+            <input type="checkbox" value="Web Development" id="106"> Web Development
+            </label>
+            <label for="107">
+                <input type="checkbox" value="BlockChain" id="107"> BlockChain
+            </label>
+            <label for="108">
+                <input type="checkbox" value="AI/ML" id="108"> AI/ML
+            </label>
+            <br><br>
+            <label for="301">
+            <textarea name="Message" id="301" cols="30" rows="10" placeholder="Message"></textarea> Message
+            </label>
+            <br><br>
+            <select name="colleges">
+                <option value="ABES">ABES</option>
+                <option value="IITD">IITD</option>
+                <option value="IIM">IIM</option>
+            </select>
+            <br><br>
+            <input type="submit" value="Submit">
+        </form>
+       
+        
+       
+    </body>
+ </html>
