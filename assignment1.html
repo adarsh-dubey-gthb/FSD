@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Border Example</title>
+    <style>
+        img[alt] {
+            border: 4px solid yellow;
+            margin: 10px; 
+            border-style: solid;
+        }
+        
+        img {
+             margin: 10px; /* Added for better spacing */
+             max-width: 300px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h2>Image Styling</h2>
+
+    <!-- <p>This image <strong>has an alt attribute</strong>, so it gets a yellow border.</p> -->
+    <img src="" alt="with alt ">
+
+    <!-- <p>This image <strong>does NOT have an alt attribute</strong>, so it has no special border.</p> -->
+    <img src="icon" title="without alt">
+
+</body>
+</html>
