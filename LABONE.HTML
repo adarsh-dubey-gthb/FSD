@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Bookstore</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Inter', sans-serif;
+            overflow: hidden;
+        }
+        .page-container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        .top-frame {
+            background-color: #f8f9fa;
+            border-bottom: 1px solid #dee2e6;
+            flex-shrink: 0;
+        }
+        .main-content {
+            display: flex;
+            flex-grow: 1;
+            overflow: hidden;
+        }
+        .left-frame {
+            width: 200px;
+            background-color: #f1f3f5;
+            border-right: 1px solid #dee2e6;
+            flex-shrink: 0;
+            overflow-y: auto;
+        }
+        .right-frame {
+            flex-grow: 1;
+            padding: 0;
+            overflow-y: auto;
+        }
+        .nav-link {
+            display: block;
+            padding: 12px 20px;
+            color: #343a40;
+            text-decoration: none;
+            border-bottom: 1px solid #e9ecef;
+            transition: background-color 0.2s;
+        }
+        .nav-link:hover {
+            background-color: #e9ecef;
+            color: #007bff;
+        }
+
+        .content-section {
+            display: none; 
+        }
+        .content-section:target {
+            display: block; 
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-container">
+        <header class="top-frame p-4 shadow-md">
+            <div class="container mx-auto flex justify-between items-center">
+                <div class="flex items-center space-x-3">
+                    <svg class="w-8 h-8 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+                    </svg>
+                    <h1 class="text-xl font-bold text-gray-800"></h1> ABESEC Bookstore</h1>
+                </div>
+                <nav class="flex items-center space-x-4">
+                    <a href="#home" class="text-gray-600 hover:text-blue-600">Home</a>
+                    <a href="#login" class="text-gray-600 hover:text-blue-600">Login</a>
+                    <a href="#registration" class="text-gray-600 hover:text-blue-600">Registration</a>
+                    <a href="#catalogue" class="text-gray-600 hover:text-blue-600">Catalogue</a>
+                    <a href="#cart" class="text-gray-600 hover:text-blue-600">Cart</a>
+                </nav>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <!-- LEFT FRAME CONTENT -->
+            <aside class="left-frame">
+                <nav>
+                    <a href="#cse" class="nav-link font-medium">CSE</a>
+                    <a href="#ece" class="nav-link font-medium">ECE</a>
+                    <a href="#eee" class="nav-link font-medium">EEE</a>
+                    <a href="#civil" class="nav-link font-medium">CIVIL</a>
+                </nav>
+            </aside>
+
+            <main class="right-frame">
+                <section id="home" class="content-section">
+                    <div class='p-8'>
+                        <h1 class='text-3xl font-bold mb-4 text-gray-800'>Welcome to the Online Bookstore!</h1>
+                        <p class='text-gray-600 text-lg'>This is the main description of the website. You can find a wide variety of books for different engineering departments. Please use the links on the left to browse the catalogue for a specific department.</p>
+                    </div>
+                </section>
+                <section id="cse" class="content-section">
+                    <div class='p-8'>
+                        <h1 class='text-3xl font-bold mb-4 text-gray-800'>Catalogue for CSE Books</h1>
+                        <ul class='list-disc list-inside text-gray-700 space-y-2'>
+                            <li>Data Structures and Algorithms</li>
+                            <li>Introduction to Programming with Python</li>
+                            <li>Database Management Systems</li>
+                            <li>Operating Systems</li>
+                        </ul>
+                    </div>
+                </section>
+                <section id="ece" class="content-section">
+                    <div class='p-8'>
+                        <h1 class='text-3xl font-bold mb-4 text-gray-800'>Catalogue for ECE Books</h1>
+                         <ul class='list-disc list-inside text-gray-700 space-y-2'>
+                            <li>Digital Logic Design</li>
+                            <li>Signals and Systems</li>
+                            <li>Microprocessors and Microcontrollers</li>
+                            <li>Communication Systems</li>
+                        </ul>
+                    </div>
+                </section>
+                <section id="eee" class="content-section">
+                    <div class='p-8'>
+                        <h1 class='text-3xl font-bold mb-4 text-gray-800'>Catalogue for EEE Books</h1>
+                         <ul class='list-disc list-inside text-gray-700 space-y-2'>
+                            <li>Basic Electrical Engineering</li>
+                            <li>Circuit Theory</li>
+                            <li>Power Electronics</li>
+                            <li>Electrical Machines</li>
+                        </ul>
+                    </div>
+                </section>
+                <section id="civil" class="content-section">
+                    <div class='p-8'>
+                        <h1 class='text-3xl font-bold mb-4 text-gray-800'>Catalogue for CIVIL Books</h1>
+                         <ul class='list-disc list-inside text-gray-700 space-y-2'>
+                            <li>Strength of Materials</li>
+                            <li>Fluid Mechanics</li>
+                            <li>Structural Analysis</li>
+                            <li>Geotechnical Engineering</li>
+                        </ul>
+                    </div>
+                </section>
+                <section id="login" class="content-section">
+                    <div class='p-8'>
+                        <h1 class='text-3xl font-bold mb-6 text-gray-800'>Login</h1>
+                        <form class='space-y-4 max-w-sm' onsubmit="event.preventDefault();">
+                            <div>
+                                <label for='email' class='block text-sm font-medium text-gray-700'>Email Address</label>
+                                <input type='email' id='email' name='email' class='mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500'>
+                            </div>
+                            <div>
+                                <label for='password' class='block text-sm font-medium text-gray-700'>Password</label>
+                                <input type='password' id='password' name='password' class='mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500'>
+                            </div>
+                            <button type='submit' class='w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500'>
+                                Sign In
+                            </button>
+                        </form>
+                    </div>
+                </section>
+                <section id="registration" class="content-section">
+                    <div class='p-8'>
+                        <h1 class='text-3xl font-bold mb-6 text-gray-800'>Create an Account</h1>
+                        <form class='space-y-4 max-w-sm' onsubmit="event.preventDefault();">
+                            <div>
+                                <label for='reg-name' class='block text-sm font-medium text-gray-700'>Full Name</label>
+                                <input type='text' id='reg-name' name='name' class='mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500'>
+                            </div>
+                            <div>
+                                <label for='reg-email' class='block text-sm font-medium text-gray-700'>Email Address</label>
+                                <input type='email' id='reg-email' name='email' class='mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500'>
+                            </div>
+                            <div>
+                                <label for='reg-password' class='block text-sm font-medium text-gray-700'>Password</label>
+                                <input type='password' id='reg-password' name='password' class='mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500'>
+                            </div>
+                            <button type='submit' class='w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500'>
+                                Register
+                            </button>
+                        </form>
+                    </div>
+                </section>
+                <section id="catalogue" class="content-section">
+                    <div class='p-8'>
+                        <h1 class='text-3xl font-bold mb-4 text-gray-800'>Full Book Catalogue</h1>
+                        <p class='text-gray-600 text-lg mb-6'>Browse our collection by department. Please select a department from the left navigation menu to view specific books.</p>
+                        <div class='space-y-2'>
+                            <a href="#cse" class='text-blue-600 hover:underline'>- Computer Science & Engineering (CSE)</a><br>
+                            <a href="#ece" class='text-blue-600 hover:underline'>- Electronics & Communication Engineering (ECE)</a><br>
+                            <a href="#eee" class='text-blue-600 hover:underline'>- Electrical & Electronics Engineering (EEE)</a><br>
+                            <a href="#civil" class='text-blue-600 hover:underline'>- Civil Engineering (CIVIL)</a>
+                        </div>
+                    </div>
+                </section>
+                <section id="cart" class="content-section">
+                    <div class='p-8'>
+                        <h1 class='text-3xl font-bold mb-4 text-gray-800'>Shopping Cart</h1>
+                        <div class='bg-gray-100 p-6 rounded-lg text-center'>
+                            <p class='text-gray-600 text-lg'>Your shopping cart is currently empty.</p>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+</body>
+</html>
+

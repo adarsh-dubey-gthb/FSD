@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Website</title>
+    <style>
+        /* Basic Body Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* Main container for the entire layout */
+        .container {
+            display: grid;
+            grid-template-areas:
+                "header header"
+                "topnav topnav"
+                "sidebar main";
+            grid-template-columns: 150px 1fr; /* Sidebar width and main content */
+            grid-template-rows: auto auto 1fr;
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            border: 1px solid black;
+            min-height: 80vh;
+        }
+
+        /* General styling for bordered cells */
+        .header, .topnav a, .sidebar, .main, .logo {
+            border: 1px solid black;
+            padding: 15px;
+            text-align: center;
+        }
+
+        /* Header Area */
+        .header {
+            grid-area: header;
+            background-color: #FFDAB9; /* Peach Puff */
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            flex-basis: 150px; /* Matches sidebar width */
+            border-right: 1px solid black;
+            margin: -15px 0 -15px -15px; /* Extend border to edges */
+        }
+
+        .website-name {
+            flex-grow: 1;
+            font-size: 2em;
+            font-weight: bold;
+        }
+
+        /* Top Navigation Bar */
+        .topnav {
+            grid-area: topnav;
+            display: flex;
+            background-color: #FFEBCD; /* Blanched Almond */
+        }
+
+        .topnav a {
+            flex: 1;
+            text-decoration: none;
+            color: black;
+            font-size: 1.1em;
+            cursor: pointer; /* Change cursor to show it's clickable */
+        }
+
+        .topnav a:hover {
+            background-color: #FFDAB9;
+        }
+
+        /* Side Navigation Bar */
+        .sidebar {
+            grid-area: sidebar;
+            background-color: #fff;
+            padding: 0; /* Remove padding to make links fill the space */
+        }
+
+        .sidebar a {
+            display: block;
+            padding: 15px;
+            text-decoration: none;
+            color: black;
+            border-bottom: 1px solid black;
+            cursor: pointer; /* Change cursor to show it's clickable */
+        }
+        
+        .sidebar a:last-child {
+            border-bottom: none;
+        }
+
+        .sidebar a:hover {
+            background-color: #f0f0f0;
+        }
+
+        /* Main Content Area */
+        .main {
+            grid-area: main;
+            background-color: #fff;
+            padding: 40px;
+        }
+
+        /* General Content Page Styling */
+        .page-content h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Login Form Styling */
+        .login-form {
+            width: 300px;
+            margin: 0 auto; /* Center the form */
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        .form-group label {
+            display: inline-block;
+            width: 100px; /* Align labels */
+            font-weight: bold;
+        }
+        
+        .form-group input[type="text"],
+        .form-group input[type="password"] {
+            padding: 8px;
+            border: 2px solid black;
+            width: 180px;
+        }
+        
+        .form-buttons {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .form-buttons input {
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            color: red;
+            background-color: white;
+        }
+
+        .form-buttons input[type="submit"] {
+            border: 3px solid black;
+        }
+
+        .form-buttons input[type="reset"] {
+            border: 1px solid grey;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header class="header">
+            <div class="logo">Logo</div>
+            <div class="website-name">Website Name</div>
+        </header>
+
+        <nav class="topnav">
+            <a onclick="showPage('home')">Home</a>
+            <a onclick="showPage('login')">Login</a>
+            <a onclick="showPage('registration')">Registration</a>
+            <a onclick="showPage('catalogue')">Catalogue</a>
+            <a onclick="showPage('cart')">Cart</a>
+        </nav>
+
+        <aside class="sidebar">
+            <a onclick="showPage('cse')">CSE</a>
+            <a onclick="showPage('ece')">ECE</a>
+            <a onclick="showPage('eee')">EEE</a>
+            <a onclick="showPage('civil')">CIVIL</a>
+        </aside>
+
+        <main class="main">
+            <div id="home-page" class="page-content">
+                <div class="login-form">
+                    <h2>Login Page</h2>
+                    <form action="#">
+                        <div class="form-group">
+                            <label for="username">User Name:</label>
+                            <input type="text" id="username" name="username">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Passwords:</label>
+                            <input type="password" id="password" name="password">
+                        </div>
+                        <div class="form-buttons">
+                            <input type="submit" value="Submit">
+                            <input type="reset" value="Reset">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <div id="login-page" class="page-content" style="display:none;">
+                <div class="login-form">
+                    <h2>Login Page</h2>
+                    <form action="#">
+                        <div class="form-group">
+                            <label for="username2">User Name:</label>
+                            <input type="text" id="username2" name="username">
+                        </div>
+                        <div class="form-group">
+                            <label for="password2">Passwords:</label>
+                            <input type="password" id="password2" name="password">
+                        </div>
+                        <div class="form-buttons">
+                            <input type="submit" value="Submit">
+                            <input type="reset" value="Reset">
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div id="registration-page" class="page-content" style="display:none;">
+                <h2>Registration</h2>
+                <p style="text-align:center;">This is where the user registration form would go.</p>
+            </div>
+
+            <div id="catalogue-page" class="page-content" style="display:none;">
+                <h2>Catalogue</h2>
+                <p style="text-align:center;">This is where the product catalogue would be displayed.</p>
+            </div>
+
+            <div id="cart-page" class="page-content" style="display:none;">
+                <h2>Shopping Cart</h2>
+                <p style="text-align:center;">This is where the user's shopping cart items would be shown.</p>
+            </div>
+
+            <div id="cse-page" class="page-content" style="display:none;">
+                <h2>Computer Science & Engineering (CSE)</h2>
+                <p style="text-align:center;">This page would contain content related to the CSE department.</p>
+            </div>
+
+            <div id="ece-page" class="page-content" style="display:none;">
+                <h2>Electronics & Communication Engineering (ECE)</h2>
+                <p style="text-align:center;">This page would contain content related to the ECE department.</p>
+            </div>
+
+            <div id="eee-page" class="page-content" style="display:none;">
+                <h2>Electrical & Electronics Engineering (EEE)</h2>
+                <p style="text-align:center;">This page would contain content related to the EEE department.</p>
+            </div>
+
+            <div id="civil-page" class="page-content" style="display:none;">
+                <h2>Civil Engineering</h2>
+                <p style="text-align:center;">This page would contain content related to the Civil Engineering department.</p>
+            </div>
+
+        </main>
+    </div>
+
+    <script>
+        // This function handles showing and hiding the page content
+        function showPage(pageId) {
+            // Get all elements with the class 'page-content'
+            const pages = document.querySelectorAll('.page-content');
+            
+            // Loop through all page sections and hide them
+            pages.forEach(page => {
+                page.style.display = 'none';
+            });
+            
+            // Get the specific page element we want to show
+            const pageToShow = document.getElementById(pageId + '-page');
+            
+            // Show the desired page
+            if (pageToShow) {
+                pageToShow.style.display = 'block';
+            }
+        }
+        
+        // Optional: Ensure the 'home' page is visible when the page first loads
+        document.addEventListener('DOMContentLoaded', () => {
+            showPage('home');
+        });
+    </script>
+
+</body>
+</html>

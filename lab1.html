@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        /* Basic Body Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* Main container for the entire layout */
+        .container {
+            display: grid;
+            grid-template-areas:
+                "header header"
+                "topnav topnav"
+                "sidebar main";
+            grid-template-columns: 150px 1fr; /* Sidebar width and main content */
+            grid-template-rows: auto auto 1fr;
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            border: 1px solid black;
+            min-height: 80vh;
+        }
+
+        /* General styling for bordered cells */
+        .header, .topnav a, .sidebar, .main, .logo {
+            border: 1px solid black;
+            padding: 15px;
+            text-align: center;
+        }
+
+        /* Header Area */
+        .header {
+            grid-area: header;
+            background-color: #FFDAB9; /* Peach Puff */
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            flex-basis: 150px; /* Matches sidebar width */
+            border-right: 1px solid black;
+            margin: -15px 0 -15px -15px; /* Extend border to edges */
+        }
+
+        .website-name {
+            flex-grow: 1;
+            font-size: 2em;
+            font-weight: bold;
+        }
+
+        /* Top Navigation Bar */
+        .topnav {
+            grid-area: topnav;
+            display: flex;
+            background-color: #FFEBCD; /* Blanched Almond */
+        }
+
+        .topnav a {
+            flex: 1;
+            text-decoration: none;
+            color: black;
+            font-size: 1.1em;
+        }
+
+        .topnav a:hover {
+            background-color: #FFDAB9;
+        }
+
+        /* Side Navigation Bar */
+        .sidebar {
+            grid-area: sidebar;
+            background-color: #fff;
+            padding: 0; /* Remove padding to make links fill the space */
+        }
+
+        .sidebar a {
+            display: block;
+            padding: 15px;
+            text-decoration: none;
+            color: black;
+            border-bottom: 1px solid black;
+        }
+        
+        .sidebar a:last-child {
+            border-bottom: none;
+        }
+
+        .sidebar a:hover {
+            background-color: #f0f0f0;
+        }
+
+        /* Main Content Area */
+        .main {
+            grid-area: main;
+            background-color: #fff;
+            padding: 40px;
+            text-align: left;
+        }
+
+        /* Login Form Styling */
+        .login-form {
+            width: 300px;
+            margin: 0 auto; /* Center the form */
+        }
+        
+        .login-form h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        .form-group label {
+            display: inline-block;
+            width: 100px; /* Align labels */
+            font-weight: bold;
+        }
+        
+        .form-group input[type="text"],
+        .form-group input[type="password"] {
+            padding: 8px;
+            border: 2px solid black;
+            width: 180px;
+        }
+        
+        .form-buttons {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .form-buttons input {
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            color: red;
+            background-color: white;
+        }
+
+        .form-buttons input[type="submit"] {
+            border: 3px solid black;
+        }
+
+        .form-buttons input[type="reset"] {
+            border: 1px solid grey;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header class="header">
+            
+            <div class="website-name">ABESEC BOOK STORE</div>
+        </header>
+
+        <nav class="topnav">
+            <a href="home.html">Home</a>
+            <a href="login.html">Login</a>
+            <a href="registration.html">Registration</a>
+            <a href="catalogue.html">Catalogue</a>
+            <a href="cart.html">Cart</a>
+        </nav>
+
+        <aside class="sidebar">
+            <a href="cse.html">CSE</a>
+            <a href="ece.html">ECE</a>
+            <a href="eee.html">EEE</a>
+            <a href="civil.html">CIVIL</a>
+        </aside>
+
+        <main class="main">
+            <div class="login-form">
+                <h2>Login Page</h2>
+                <form action="#">
+                    <div class="form-group">
+                        <label for="username">User Name:</label>
+                        <input type="text" id="username" name="username">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Passwords:</label>
+                        <input type="password" id="password" name="password">
+                    </div>
+                    <div class="form-buttons">
+                        <input type="submit" value="Submit">
+                        <input type="reset" value="Reset">
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>
