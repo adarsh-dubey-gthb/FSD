@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Position Example</title>
+<style>
+  body {
+    height: 2000px; /* so we can scroll */
+    font-family: Arial, sans-serif;
+  }
+
+  .container {
+    position: relative;
+    border: 2px solid black;
+    height: 400px;
+    margin: 40px;
+    padding: 10px;
+  }
+
+  .box {
+    width: 100px;
+    height: 100px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+  }
+
+  /* 1️⃣ static (default) */
+  .static {
+    background: gray;
+    position: static;
+  }
+
+  /* 2️⃣ relative */
+  .relative {
+    background: blue;
+    position: relative;
+    top: 20px;
+    left: 30px;
+  }
+
+  /* 3️⃣ absolute */
+  .absolute {
+    background: green;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+  }
+
+  /* 4️⃣ fixed */
+  .fixed {
+    background: red;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+  }
+
+  /* 5️⃣ sticky */
+  .sticky {
+    background: orange;
+    position: sticky;
+    top: 0;
+  }
+</style>
+</head>
+<body>
+
+<h2>CSS Position Example</h2>
+<p>Scroll down to see how <strong>fixed</strong> and <strong>sticky</strong> work.</p>
+
+<div class="container">
+  <div class="box static">Static</div>
+  <div class="box relative">Relative</div>
+  <div class="box absolute">Absolute</div>
+  <div class="box sticky">Sticky</div>
+</div>
+
+<div style="height:1000px;"></div>
+
+<div class="box fixed">Fixed</div>
+
+</body>
+</html>
