@@ -1,30 +1,106 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-    </head>
-    <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        <h1> Input Style </h1>
-        <input style="background-color: black;" type="text" placeholder="Enter Your Name">
-        <br><br>
-        <input style="background-color: red;" type="password" placeholder="Enter password">
-        <br><br>
-        <input style="background-color: blue;" type="radio">
-        <br><br>
-        <input style="background-color: orange;" type="checkbox">
-        
-        <script src="" async defer></script>
-    </body>
-</html>
+ <!doctype html>
+ 2 <html lang="en">
+ 3 <head>
+ 4  <meta charset="utf-8" />
+ 5  <meta name="viewport" content="width=device-width,initial-scale=1" />
+ 6  <title>Cart Page - Web Site Name</title>
+ 7  <style>
+ 8    /* Simple, printable/cart-like styling */
+ 9    body { font-family: Georgia, "Times New Roman", serif; background:#f5f5f5; margin:2rem; }
+ 10    .container { max-width: 960px; margin: 0 auto; background: #fff; border: 3px solid #333; }
+ 11    header { border-bottom: 3px solid #333; padding: 18px 24px; display:flex; align
+items:center; justify-content:space-between; }
+ 12    .logo { font-weight:bold; font-size:1.1rem; }
+ 13    .site-name { text-align:center; font-size:1.25rem; font-weight:700; flex:1; }
+ 14    nav { display:flex; gap:12px; }
+ 15    nav a { text-decoration:none; padding:10px 18px; border-left:1px solid #333; 
+display:inline-block; }
+ 16    .main { padding: 18px 24px; }
+ 17    table.cart { width:100%; border-collapse:collapse; border:2px solid #444; }
+ 18    table.cart th, table.cart td { border:1px solid #444; padding:10px 12px; text-align:left; 
+vertical-align:middle; }
+ 19    table.cart th { background:#eee; font-weight:700; text-align:center; }
+ 20    .center { text-align:center; }
+ 21    .right { text-align:right; }
+ 22    tfoot td { font-weight:700; background:#fafafa; }
+ 23  </style>
+ 24 </head>
+ 25 <body>
+ 26  <div class="container" role="main" aria-label="Shopping cart example">
+ 27    <header>
+ 28      <div class="logo">Logo</div>
+ 29      <div class="site-name">Web Site Name</div>
+ 30      <nav aria-label="Top navigation">
+ 31        <a href="#">Home</a>
+ 32        <a href="#">Login</a>
+ 33        <a href="#">Registration</a>
+ 34        <a href="#">Catalogue</a>
+ 35        <a href="#">Cart</a>
+ 36      </nav>
+ 37    </header>
+ 38
+ 39    <div class="main">
+ 40      <table class="cart" aria-describedby="cart-description">
+ 41        <caption id="cart-description" style="caption-side:top; text-align:left; padding:8px 
+0;">
+ 42          CART PAGE: The cart page contains the details about the books which are added to the 
+cart.
+ 43        </caption>
+ 10/13/25, 9:58 PM experiment4.html
+ localhost:52624/f22e31a8-e705-4cf6-b5d0-b62a7d4263e8/ 1/3
+44        <thead>
+ 45          <tr>
+ 46            <th>Dept.</th>
+ 47            <th>Book name</th>
+ 48            <th class="center">Price</th>
+ 49            <th class="center">Quantity</th>
+ 50            <th class="right">Amount</th>
+ 51          </tr>
+ 52        </thead>
+ 53        <tbody>
+ 54          <tr>
+ 55            <td>CSE</td>
+ 56            <td>Book name</td>
+ 57            <td class="center">Price</td>
+ 58            <td class="center">Quantity</td>
+ 59            <td class="right">Amount</td>
+ 60          </tr>
+ 61
+ 62          <tr>
+ 63            <td>ECE</td>
+ 64            <td>Java 2</td>
+ 65            <td class="center">$35.5</td>
+ 66            <td class="center">2</td>
+ 67            <td class="right">$70</td>
+ 68          </tr>
+ 69
+ 70          <!-- Example empty rows / placeholders if needed -->
+ 71          <tr>
+ 72            <td>EEE</td>
+ 73            <td>XML bible</td>
+ 74            <td class="center">$40.5</td>
+ 75            <td class="center">1</td>
+ 76            <td class="right">$40.5</td>
+ 77          </tr>
+ 78
+ 79          <tr>
+ 80            <td>CIVIL</td>
+ 81            <td>Total amount</td>
+ 82            <td class="center">-$130.5</td>
+ 83            <td class="center"></td>
+ 84            <td class="right"></td>
+ 85          </tr>
+ 86        </tbody>
+ 87        <tfoot>
+ 88          <tr>
+ 89            <td colspan="4" class="right">Grand Total</td>
+ 90            <td class="right">$110.50</td>
+ 91          </tr>
+ 92        </tfoot>
+ 93      </table>
+ 10/13/25, 9:58 PM experiment4.html
+ localhost:52624/f22e31a8-e705-4cf6-b5d0-b62a7d4263e8/ 2/3
+94    </div>
+ 95  </div>
+ 96 </body>
+ 97 </html
