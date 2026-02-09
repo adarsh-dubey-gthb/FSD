@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        <p id = "id1"> </p>
+        for (let i = 1; i <= 5; i++) {
+            let row = "";
+            for (let j = 1; j <= i; j++) {
+                row += j;
+            }
+            for (let j = i - 1; j >= 1; j--) {
+                row += j;
+            }
+            console.log(row);
+        }
+
+        for (let index = 0; index < 5; index++) {
+            let line = ""
+            for (let j = 0; j <= index; j++) {
+                line += j;
+                
+            }
+            for (let j =index-1; j>=1; j--) {
+                line += j;
+                
+            }
+            console.log(line);
+
+            var i =1;
+            var j = 1;
+            var txt = "";
+            for (var x = 0;  x< 5; x++) {
+                txt += i + "<br>";
+                j = j*10+1;
+                i = j*j;
+                
+            }
+            document.getElementById("id1").innerHTML = txt;
+        }
+    </script>
+</body>
+</html>
