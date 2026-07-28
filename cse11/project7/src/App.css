@@ -1,0 +1,150 @@
+.page-shell {
+  min-height: 100vh;
+  padding: 32px;
+  background:
+    radial-gradient(circle at top left, rgba(255, 184, 107, 0.28), transparent 34%),
+    radial-gradient(circle at top right, rgba(46, 139, 87, 0.18), transparent 28%),
+    linear-gradient(180deg, #fffaf3 0%, #f5efe6 100%);
+  color: #17324d;
+}
+
+.hero-card,
+.content-grid,
+.contact-banner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.hero-card {
+  border-radius: 28px;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 24px 70px rgba(23, 50, 77, 0.12);
+  backdrop-filter: blur(10px);
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #8c5e2a;
+}
+
+.hero-card h1 {
+  margin: 0;
+  font-size: clamp(2.4rem, 4vw, 4.4rem);
+  line-height: 1;
+}
+
+.hero-text {
+  max-width: 720px;
+  margin: 18px 0 0;
+  font-size: 1.05rem;
+  color: #38536b;
+}
+
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.hero-stats article {
+  padding: 18px;
+  border-radius: 18px;
+  background: linear-gradient(180deg, #ffffff 0%, #f8f2e9 100%);
+  border: 1px solid rgba(140, 94, 42, 0.12);
+}
+
+.hero-stats strong {
+  display: block;
+  font-size: 2rem;
+  color: #1f6b4e;
+}
+
+.hero-stats span {
+  color: #56697c;
+}
+
+.content-grid {
+  padding: 28px 0;
+}
+
+.section-heading h2,
+.contact-banner h2 {
+  margin: 0;
+  font-size: clamp(1.6rem, 2.5vw, 2.4rem);
+}
+
+.department-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.department-card {
+  padding: 24px;
+  border-radius: 22px;
+  background: #fff;
+  border: 1px solid rgba(23, 50, 77, 0.08);
+  box-shadow: 0 14px 34px rgba(23, 50, 77, 0.08);
+}
+
+.department-card h3 {
+  margin: 0 0 10px;
+  font-size: 1.25rem;
+}
+
+.department-card p {
+  margin: 0;
+  color: #4f6477;
+}
+
+.department-card ul {
+  margin: 16px 0 0;
+  padding-left: 18px;
+  color: #1f6b4e;
+}
+
+.department-card li + li {
+  margin-top: 8px;
+}
+
+.contact-banner {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: center;
+  margin-top: 24px;
+  padding: 26px 30px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, #1f6b4e 0%, #2e8b57 100%);
+  color: #f6fff8;
+}
+
+.contact-banner p {
+  max-width: 420px;
+  margin: 0;
+  color: rgba(246, 255, 248, 0.9);
+}
+
+@media (max-width: 800px) {
+  .page-shell {
+    padding: 16px;
+  }
+
+  .hero-card {
+    padding: 24px;
+  }
+
+  .hero-stats,
+  .department-list,
+  .contact-banner {
+    grid-template-columns: 1fr;
+    display: grid;
+  }
+}
